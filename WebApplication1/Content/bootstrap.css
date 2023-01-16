@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -1337,7 +1338,7 @@ mark,
   color: #777777;
 }
 .text-primary {
-  color: #337ab7;
+  color: cornflowerblue;
 }
 a.text-primary:hover,
 a.text-primary:focus {
