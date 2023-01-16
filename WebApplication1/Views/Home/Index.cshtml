@@ -1,0 +1,59 @@
+﻿
+
+@model List<WebApplication1.Models.data>
+@{
+    ViewBag.Title = "Home Page";
+
+}
+
+@using (Html.BeginForm( "Index","Home"))
+{
+<div class="row container">
+    <div class="col-2">
+        <p>Employee ID</p>
+
+    </div>
+    <div class="col-3">
+        <input type="text" id="TRM" name="myText" value="@ViewBag.pass">
+
+    </div>
+    <div class="col-3">
+        <button type="submit" class="btn  btn-primary" value="verify" name="myButton">Search</button>
+    </div>
+    <div class="col">
+        <p style="color: red ">@ViewBag.err</p>
+    </div>
+</div>
+}
+<br /><br />
+
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Employee Name</th>
+                    <th scope="col">Employee Age</th>
+                    <th scope="col">Employee Salary</th>
+                    <th scope="col">Annual Salary</th>
+                    <th scope="col">Profil Image</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            
+                @foreach (var obj in Model)
+                {
+                    <tr>
+                        <th scope="row">@obj.id</th>
+                        <td>@obj.employee_name</td>
+                        <td>@obj.employee_age</td>
+                        <td>@obj.employee_salary</td>
+                        <td>@obj.anual_salary</td>
+                        <td>@obj.profile_image</td>
+
+                    </tr>
+                }
+                            </tbody>
+        </table>
+    </div>
